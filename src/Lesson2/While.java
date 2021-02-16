@@ -2,21 +2,13 @@ package Lesson2;
 
 public class While {
     public static void main(String[] args) {
-        int n = 10;
-        do {
-            System.out.println("n=" + n);
-            n--;
+        int population = 10000000;
+        int born = 14;
+        int death = 8;
+        int dif = born - death;
+        for(int i = 1; i <= 10; i++){
+            population += population * dif / 1000;
         }
-        while (n>0) ;
-        System.out.println("==============");
-
-        while (n<10) {
-            if(n==5) {
-                n++;
-                continue;
-            }
-            System.out.println("n=" + n);
-            n++;
-        }
+        System.out.println(population);
     }
 }
