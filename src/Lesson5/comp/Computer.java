@@ -29,16 +29,15 @@ public class Computer {
     }
 
     public void turnOn() {
-        Random rand = new Random();
-        int a = rand.nextInt(2);
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Для включения введите 0 или 1 ");
-        int b = scanner.nextInt();
-
         if (resource == 0) {
             System.out.println("Комп сгорел");
         } else {
+            Random rand = new Random();
+            int a = rand.nextInt(2);
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Для включения введите 0 или 1 ");
+            int b = scanner.nextInt();
             if (a == b) {
                 System.out.println("Включаю");
             } else {
