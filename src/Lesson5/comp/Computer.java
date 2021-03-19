@@ -28,38 +28,24 @@ public class Computer {
         System.out.println("Процессор: " + cpu + "; Оперативная память: " + ram + "; Жесткий диск: " + harddisk);
     }
 
-    public void turnOn() {
-        if (resource == 0) {
-            System.out.println("Комп сгорел");
+    public void turnOn(int a, int b) {
+        if(a == b) {
+            System.out.println("Включили");
         } else {
-            Random rand = new Random();
-            int a = rand.nextInt(2);
+            resource--;
+            System.out.println("Resource: " + resource);
+            if(resource == 0) {
+                System.out.println("Комп сгорел");
 
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Для включения введите 0 или 1 ");
-            int b = scanner.nextInt();
-            if (a == b) {
-                System.out.println("Включаю");
             } else {
-                System.out.println("Выключаю");
-                turnOff();
+                Random random = new Random();
+                int randomNum = random.nextInt(5);
+                turnOn(a,randomNum);
             }
-        }
 
+        }
     }
 
     public void turnOff() {
-        Random rand = new Random();
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Для выключения введите 0 или 1 ");
-        int b = scanner.nextInt();
-
-        int a = rand.nextInt(2);
-        if (a == b) {
-            System.out.println("Выключаю");
-        } else {
-            resource--;
-        }
     }
 }
