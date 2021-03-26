@@ -8,9 +8,9 @@ import java.io.Serializable;
 public class Person implements Serializable {
 
 	/**
-	 * 
+	 *
 	 */
-	private static final long serialVersionUID = 2L;
+	private static final long serialVersionUID = 1L;
 
 	public static String nickName = "agent007";
 		

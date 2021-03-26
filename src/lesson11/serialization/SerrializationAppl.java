@@ -21,11 +21,8 @@ public class SerrializationAppl {
 			Person serializedPerson = (Person) ois.readObject();
 			System.out.println(serializedPerson);
 		} catch (FileNotFoundException e) {
-			System.out.println(e.getMessage());
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 

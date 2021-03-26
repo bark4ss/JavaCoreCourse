@@ -1,0 +1,43 @@
+package lesson12.collection;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class DemoList {
+    public static void main(String[] args) {
+        List<String> peoples = new ArrayList<>();
+        peoples.add("Tom");
+        peoples.add("Alice");
+        peoples.add("Bob");
+        peoples.add(1,"Kate");
+        peoples.add(4,"Sam");
+        System.out.println(peoples.get(1));
+        peoples.set(1,"Robert");
+        peoples.add("Robert");
+        System.out.printf("ArrayList has %d elements \n", peoples.size());
+
+        for (String people:peoples) {
+            System.out.println(people);
+        }
+
+        if(peoples.contains("Tom")) {
+            System.out.println("peoples contains Tom");
+        }
+        System.out.println("====================!");
+        System.out.printf("ArrayList has %d elements \n", peoples.size());
+        peoples.remove("Robert");
+        System.out.printf("ArrayList has %d elements \n", peoples.size());
+        System.out.println("====================!");
+        peoples.remove(1);
+
+        for (String people:peoples) {
+            System.out.println(people);
+        }
+        System.out.println("===================");
+        Object[] peopleArray = peoples.toArray();
+        for (Object person:peopleArray) {
+            System.out.println(person);
+        }
+    }
+}
