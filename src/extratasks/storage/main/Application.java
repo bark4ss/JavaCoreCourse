@@ -8,6 +8,7 @@ import extratasks.storage.service.filehandler.storage.StorageReader;
 import extratasks.storage.service.filehandler.storage.StorageWriter;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {

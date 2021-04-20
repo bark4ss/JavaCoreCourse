@@ -1,6 +1,7 @@
 package extratasks.storage.model;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Storage {
 
@@ -36,32 +37,15 @@ public class Storage {
     }
 
     public double getTotalSum () {
-        double sum= 0.0;
-        for (Item item:items) {
-            sum += item.getSum();
-        }
-
-        return sum;
+        return items.stream().map(Item::getSum).reduce(0.0,Double::sum);
     }
 
     public int getTotalItemCount () {
-        int total = 0;
-        for (Item item:items) {
-            total += item.getCount();
-        }
-        return total;
+        return items.stream().map(Item::getCount).reduce(0,Integer::sum);
     }
 
     public Map<String,Double> getUniqueItemWithSum () {
-        Map<String, Double> map = new HashMap<>();
-        for (Item item : items) {
-            double sum = item.getSum();
-            if(map.containsKey(item.getName())){
-                sum = map.get(item.getName()) + item.getSum();
-            }
-            map.put(item.getName(), Math.round(sum*100)/100D);
-        }
-        return map;
+        return items.stream().collect(Collectors.groupingBy(Item::getName,Collectors.summingDouble(Item::getSum)));
     }
 
     @Override
