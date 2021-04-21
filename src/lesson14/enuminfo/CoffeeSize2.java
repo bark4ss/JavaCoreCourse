@@ -1,7 +1,7 @@
 package lesson14.enuminfo;
 
 public enum CoffeeSize2 {
-    // 100, 150 и 200 передаются в конструктор
+    // 100, 150, 200 передаются в конструктор
     BIG(100), HUGE(150), OVERWHELMING(200);
 
     private int ml;
