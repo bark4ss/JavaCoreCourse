@@ -1,0 +1,23 @@
+<!-- Объявление возможных элементов -->
+<!ELEMENT employee EMPTY>
+<!ELEMENT employees (employee+)>
+<!ELEMENT office (employees)>
+<!ELEMENT offices (office+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (name, offices)>
+
+<!-- Добавление атрибутов для элементов employee и office -->
+<!ATTLIST employee
+    name CDATA #REQUIRED
+    job  CDATA #REQUIRED
+>
+
+<!ATTLIST office
+    floor CDATA #REQUIRED
+    room  CDATA #REQUIRED
+>
+
+<!-- Добавление сущностей -->
+<!ENTITY M "Maksim">
+<!ENTITY I "Ivan">
+<!ENTITY F "Franklin">

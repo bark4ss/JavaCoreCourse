@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<group>
+    <name>Test group5</name>
+    <members>
+        <person>
+            <firstName>Viktar</firstName>
+            <lastName>Tsialiatka</lastName>
+            <birthDay>2002-10-11</birthDay>
+        </person>
+        <person>
+            <firstName>Viktar2</firstName>
+            <lastName>Tsialiatka2</lastName>
+            <birthDay>2003-10-11</birthDay>
+        </person>
+    </members>
+</group>
