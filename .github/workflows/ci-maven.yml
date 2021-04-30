@@ -4,7 +4,6 @@
 name: Java CI with Maven
 env:
   APPLICATION_NAME: "Java Courses Tutorials"
-  DEPLOY_PACKAGE_NAME: "javacore-deploy-ver-${{ github.sha }}
 
 on:
   push:
