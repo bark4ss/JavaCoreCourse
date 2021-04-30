@@ -41,5 +41,3 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B deploy --file pom.xml
-    - name: Deployment package
-      run: echo "Deploy package name : {{ env.DEPLOY_PACKAGE_NAME }}
