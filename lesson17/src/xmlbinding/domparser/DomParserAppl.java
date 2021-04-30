@@ -20,18 +20,19 @@ import java.util.List;
 public class DomParserAppl {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         //https://howtodoinjava.com/java/xml/read-xml-dom-parser-example/
-        Company company = parseCompanyXML();
+        File file = new File("employee.xml");
+        Company company = parseCompanyXML(file);
         System.out.println(company);
     }
 
-    private static Company parseCompanyXML() throws ParserConfigurationException, SAXException, IOException
+    private static Company parseCompanyXML(File name) throws ParserConfigurationException, SAXException, IOException
     {
         //Initialize a company
         Company company = new Company();
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new File("employee.xml"));
+        Document document = builder.parse(name);
         document.getDocumentElement().normalize();
         NodeList nListCompany = document.getElementsByTagName("company");
         for (int i = 0; i < nListCompany.getLength(); i++) {

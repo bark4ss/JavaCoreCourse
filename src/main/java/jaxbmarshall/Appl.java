@@ -1,5 +1,6 @@
 package jaxbmarshall;
 
+import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -26,10 +27,10 @@ public class Appl {
         Group group = new Group();
         group.setName("Test group5");
         group.getMembers().add(
-                new Person(LocalDate.of(2002, 10, 11), "Vlad", "Govaka")
+                new Person(LocalDate.of(2002, 10, 11), "Viktar", "Tsialiatka")
         );
         group.getMembers().add(
-                new Person(LocalDate.of(2003, 10, 11), "Vasya", "Kundas")
+                new Person(LocalDate.of(2003, 10, 11), "Viktar2", "Tsialiatka2")
         );
 
         return group;

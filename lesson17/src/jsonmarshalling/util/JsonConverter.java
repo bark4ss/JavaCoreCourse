@@ -5,8 +5,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import jsonmarshalling.model.Car;
-import jsonmarshalling.model.Comfort;
 
 import java.io.File;
 import java.io.IOException;

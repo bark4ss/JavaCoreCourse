@@ -3,13 +3,13 @@
     <name>Test group5</name>
     <members>
         <person>
-            <firstName>Viktar</firstName>
-            <lastName>Tsialiatka</lastName>
+            <firstName>Vlad</firstName>
+            <lastName>Govaka</lastName>
             <birthDay>2002-10-11</birthDay>
         </person>
         <person>
-            <firstName>Viktar2</firstName>
-            <lastName>Tsialiatka2</lastName>
+            <firstName>Vasya</firstName>
+            <lastName>Kundas</lastName>
             <birthDay>2003-10-11</birthDay>
         </person>
     </members>

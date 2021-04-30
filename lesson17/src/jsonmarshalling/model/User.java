@@ -3,14 +3,13 @@ package jsonmarshalling.model;
 import com.fasterxml.jackson.annotation.*;
 
 
-@JsonRootName(value = "Person")
+@JsonRootName(value = "Vasya")
 @JsonPropertyOrder({ "id", "phone", "name" })
 public class User {
     @JsonProperty("Number")
     private long id;
     @JsonProperty("First Name")
     private String name;
-    @JsonRawValue
     private String phone;
     @JsonIgnore
     private String level;

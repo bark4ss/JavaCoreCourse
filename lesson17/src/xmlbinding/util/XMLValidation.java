@@ -20,7 +20,7 @@ public class XMLValidation {
         System.out.println(XMLUtils.validateWithDTDUsingDOM("employee.xml"));
         System.out.println(XMLUtils.validateWithDTDUsingSAX("employee1.xml"));
 
-        System.out.println(validateXMLSchema("employee.xsd","employee.xml"));
+        System.out.println(validateXMLSchema("employee.xsd","employee2.xml"));
 
 
     }

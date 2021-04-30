@@ -1,5 +1,6 @@
 package jsonmarshalling;
 
+import jsonmarshalling.model.Book;
 import jsonmarshalling.model.Car;
 import jsonmarshalling.model.Comfort;
 import jsonmarshalling.model.User;
@@ -7,6 +8,7 @@ import jsonmarshalling.util.JsonConverter;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -25,32 +27,37 @@ public class App {
         //https://www.baeldung.com/jackson-annotations
         JsonConverter<Car> carJsonConverter = new JsonConverter<>();
         JsonConverter<User> userJsonConverter = new JsonConverter<>();
+        JsonConverter<Book> bookJsonConverter = new JsonConverter<>();
+        Book book = new Book("Basic", LocalDate.of(2020,03,04));
         File carJsonFile = new File("car.json");
         File carJsonArrFile = new File("cars.json");
 
         File userJsonFile = new File("user.json");
 
+        String bookJson = bookJsonConverter.convertObjToJson(book);
+        System.out.println(bookJson);
+
         String carToJson = carJsonConverter.convertObjToJson(carJsonFile,cars.get(0));
-        System.out.println(carToJson);
+        //System.out.println(carToJson);
 
         String carsToJson = carJsonConverter.convertObjArrayToJson(carJsonArrFile,cars);
-        System.out.println(carsToJson);
+        //System.out.println(carsToJson);
 
         Car car = carJsonConverter.convertJsonToObj(carToJson,Car.class);
-        System.out.println(car);
+        //System.out.println(car);
 
 
         Car carFromJsonFile = carJsonConverter.convertJsonToObj(carToJson, Car.class);
-        System.out.println(carFromJsonFile);
+        //System.out.println(carFromJsonFile);
 
         List<Car> carArray = carJsonConverter.convertJsonToObjArr(carJsonArrFile);
-        System.out.println("List of cars:" + carArray);
+        //System.out.println("List of cars:" + carArray);
 
         String color = carJsonConverter.getObjJsonNode(carToJson, "color");
-        System.out.println(color);
+        //System.out.println(color);
 
         Map<String, Object> carMapFromJson = carJsonConverter.convertJsonToMap(carJsonFile);
-        System.out.println(carMapFromJson);
+        //System.out.println(carMapFromJson);
 
         String userToJson = userJsonConverter.convertObjToJsonWithRoot(userJsonFile,user);
         System.out.println(userToJson);
