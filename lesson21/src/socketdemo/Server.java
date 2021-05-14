@@ -7,6 +7,7 @@ import java.net.Socket;
 
 public class Server extends Thread {
     //http://java-online.ru/java-socket.xhtml
+    //https://javarush.ru/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh
     // открываемый порт сервера
     private static final int port = 6666;
     private String TEMPL_MSG =
