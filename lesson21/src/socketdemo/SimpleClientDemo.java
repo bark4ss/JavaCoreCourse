@@ -38,7 +38,7 @@ public class SimpleClientDemo {
         try {
 
             // Write data to the output stream of the Client Socket.
-            os.write("HELO");
+            os.write("HELLO");
 
             // End of line
             os.newLine();

@@ -2,13 +2,18 @@ package demo;
 
 public class While {
     public static void main(String[] args) {
-        int population = 10000000;
-        int born = 14;
-        int death = 8;
-        int dif = born - death;
-        for(int i = 1; i <= 10; i++){
-            population += population * dif / 1000;
+        int a = 9;
+        do {
+            System.out.println(a);
+            a--;
         }
-        System.out.println(population);
+        while (a > 9);
+
+        int b = 11;
+        while (b < 20) {
+            System.out.println(b);
+            b++;
+        }
+
     }
 }
