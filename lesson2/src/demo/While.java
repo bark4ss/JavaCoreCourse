@@ -11,6 +11,10 @@ public class While {
 
         int b = 11;
         while (b < 20) {
+            if (b == 15) {
+                System.out.println(b);
+                break;
+            }
             System.out.println(b);
             b++;
         }
