@@ -33,7 +33,7 @@ public class Application {
         String temp = Person.className;
         int result = Calculator.multiply(3, 4);
         Calculator calc = new Calculator();
-        result = calc.devide(8,2);
+        result = calc.divide(8,2);
         System.out.println(result);
         abs(6.7);
     }

@@ -11,7 +11,7 @@ public class ScannerDemo {
         Random random = new Random();
 
         while (a > 0) {
-            int r = random.nextInt(90) + 10;
+            int r = random.nextInt(13) + 5;
             System.out.println(r);
             a--;
         }
