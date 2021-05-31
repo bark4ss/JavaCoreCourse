@@ -55,4 +55,20 @@ public class Person {
     public static int sum (int a, int b) {
         return a+b;
     }
+
+    public static int sum (int a, int b, int c) {
+        return a+b+c;
+    }
+
+    public static int sum (int... a) {
+        int sum = 10;
+        for (int x : a) {
+            sum=sum + x;
+        }
+        return sum;
+    }
+
+    public static double sum (double a, double b) {
+        return a+b;
+    }
 }
