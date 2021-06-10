@@ -47,4 +47,8 @@ public class Person {
     public void setMarried(boolean married) {
         isMarried = married;
     }
+
+    public void displayInfo () {
+        System.out.println("Hello " + this.name);
+    }
 }
