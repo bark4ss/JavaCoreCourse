@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+//https://metanit.com/java/tutorial/6.1.php
 public class ReadConsole {
 
 	public static void main(String[] args) throws IOException {

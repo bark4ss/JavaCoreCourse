@@ -29,9 +29,5 @@ public class Position implements Serializable{
 	public String toString() {
 		return "Position [name=" + name + ", salary=" + salary + "]";
 	}
-	
-	public void readObject (Person p) throws IOException {
-		throw new NotSerializableException();
-	}
 
 }

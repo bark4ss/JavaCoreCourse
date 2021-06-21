@@ -29,19 +29,4 @@ public class FileCopy {
 
 	}
 
-	public static void readFileWithoutTryWhithResources () {
-
-		try (FileInputStream fileIn = new FileInputStream("fileSymbol.txt");
-			 FileOutputStream fileOut = new FileOutputStream("copied_fileSymbol.txt")) {
-
-			int a;
-			while ((a = fileIn.read()) != -1) {
-				System.out.println("ByteCode: " + a + " char presentation: " + (char) a);
-				fileOut.write(a);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 }

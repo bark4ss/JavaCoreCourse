@@ -9,7 +9,7 @@ public class FileSymbolCopy {
 	public static void main(String[] args) throws IOException {
 
 		try (FileReader fileIn = new FileReader("fileSymbol.txt");
-				FileWriter fileOut = new FileWriter("copied_fileSymbol.txt")) {
+				FileWriter fileOut = new FileWriter("copied_fileSymbol.txt",true)) {
 
 			int a;
 			while ((a = fileIn.read()) != -1) {
@@ -21,9 +21,11 @@ public class FileSymbolCopy {
 
 	public static void readFileWithoutTryWhithResources () throws IOException {
 
-		try (FileReader fileIn = new FileReader("fileSymbol.txt");
-			 FileWriter fileOut = new FileWriter("copied_fileSymbol.txt")) {
-
+		FileReader fileIn = null;
+		FileWriter fileOut = null;
+		try {
+			fileIn = new FileReader("fileSymbol.txt");
+			fileOut = new FileWriter("copied_fileSymbol.txt");
 			int a;
 			while ((a = fileIn.read()) != -1) {
 				fileOut.write(a);
@@ -31,6 +33,9 @@ public class FileSymbolCopy {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			fileIn.close();
+			fileOut.close();
 		}
 	}
 }

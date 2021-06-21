@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+//https://metanit.com/java/tutorial/6.9.php
 public class FileCopyByLine {
 
 	public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class FileCopyByLine {
 			}
 			System.out.println("Result length of bytes: " + lengthBytes);
 			String result = builder.toString();
-			String intermediateLine = result.strip();
+			String intermediateLine = result.stripTrailing();
 			fileOut.write(intermediateLine);
 			System.out.println("=================================");
 			System.out.println("Total number of recorded lines: " + countLine);

@@ -2,15 +2,11 @@ package demo;
 
 import java.io.File;
 
-public class CreateDirectory {
+public class CreateDirectoryDemo1 {
 
 	public static void main(String[] args) {
-		String nameDir = "D://Newdir1/newdir";
-		String pathDir = "D://TeachMeSkills/JavaCore";
-		File a = new File(nameDir);
+		String pathDir = "G://TeachMeSkills/TeachMeSkills/JavaCore";
 		File path = new File(pathDir);
-		boolean flag = a.mkdir();
-		System.out.println(flag);
 		int countFolder = 0;
 		int countFile = 0;
 		long totalSize = 0;
