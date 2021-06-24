@@ -9,6 +9,7 @@ public class DemoMap {
         states.put(2, "Spain");
         states.put(4, "France");
         states.put(3, "Italy");
+        states.put(1,"Russia");
 
         String second = states.get(2);
         System.out.println(second);

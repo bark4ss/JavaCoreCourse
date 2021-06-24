@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DemoSet {
     public static void main(String[] args) {
-        Set<String> states = new TreeSet<>();
+        Set<String> states = new HashSet<>();
         states.add("Germany");
         states.add("France");
         states.add("Great Britain");
@@ -21,7 +21,8 @@ public class DemoSet {
 
         ComparatorPersonBaName comparator = new ComparatorPersonBaName();
         ComparatorPersonByAge comparatorPersonByAge = new ComparatorPersonByAge();
-        Set<Person> persons = new TreeSet<>(comparator.thenComparing(comparatorPersonByAge));
+        Set<Person> persons = new HashSet<>();
+        persons.add(new Person("Tom", 26));
         persons.add(new Person("Tom", 26));
         persons.add(new Person("Alice", 25));
         persons.add(new Person("Kate", 31));

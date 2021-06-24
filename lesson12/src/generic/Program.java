@@ -2,8 +2,8 @@ package generic;
 
 public class Program {
     public static void main(String[] args) {
-        AccountGeneric<String,String> account1 = new AccountGeneric<>("2345","6000");
-        String acc1Id = account1.getId();
+        AccountGeneric<Integer,String> account1 = new AccountGeneric<>(12,"6000");
+        Integer acc1Id = account1.getId();
         String acc1Sum = account1.getSum();
         System.out.println(acc1Id);
         System.out.println(acc1Sum);

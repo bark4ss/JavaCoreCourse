@@ -1,6 +1,8 @@
 package collection.list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 //https://metanit.com/java/tutorial/5.1.php
 //https://metanit.com/java/tutorial/5.2.php
@@ -16,11 +18,11 @@ public class DemoAppl1 {
         peoples.set(1,"Robert");
         peoples.add("Robert");
         System.out.printf("ArrayList has %d elements \n", peoples.size());
-
+        System.out.println("===========================================");
         for (String people:peoples) {
             System.out.println(people);
         }
-
+        System.out.println("===========================================");
         if(peoples.contains("Tom")) {
             System.out.println("peoples contains Tom");
         }
