@@ -17,7 +17,7 @@ public class FileCopy {
 		System.out.println("Current relative path is: " + s);
 		//try with resources
 		try (FileInputStream fileIn = new FileInputStream("file.txt");
-				FileOutputStream fileOut = new FileOutputStream("copied_file.txt")) {
+				FileOutputStream fileOut = new FileOutputStream("file.txt", true)) {
 					
 			int a;
 			while ((a = fileIn.read()) != -1) {

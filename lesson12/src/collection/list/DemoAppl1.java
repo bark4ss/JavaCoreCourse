@@ -1,9 +1,10 @@
-package collection;
+package collection.list;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class DemoList {
+//https://metanit.com/java/tutorial/5.1.php
+//https://metanit.com/java/tutorial/5.2.php
+public class DemoAppl1 {
     public static void main(String[] args) {
         List<String> peoples = new ArrayList<>();
         peoples.add("Tom");

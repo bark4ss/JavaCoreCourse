@@ -33,7 +33,7 @@ public class DemoSet {
         System.out.println(isPersonAdded);
 
         for (Person person:persons) {
-            System.out.println(person.getName());
+            System.out.printf("Name: %s , Age: %d \n",person.getName(), person.getAge());
         }
     }
 }
