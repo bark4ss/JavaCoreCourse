@@ -21,7 +21,7 @@ public class DemoSet {
 
         ComparatorPersonBaName comparator = new ComparatorPersonBaName();
         ComparatorPersonByAge comparatorPersonByAge = new ComparatorPersonByAge();
-        Set<Person> persons = new HashSet<>();
+        Set<Person> persons = new TreeSet<>();
         persons.add(new Person("Tom", 26));
         persons.add(new Person("Tom", 26));
         persons.add(new Person("Alice", 25));
