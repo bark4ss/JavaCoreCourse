@@ -1,5 +1,7 @@
 package streamAPI;
 
+import model.Phone;
+
 import java.util.stream.Stream;
 
 public class StreamApiFlatMapDemo4 {
@@ -12,6 +14,6 @@ public class StreamApiFlatMapDemo4 {
                         String.format("название: %s  цена без скидки: %d", p.getName(), p.getPrice()),
                         String.format("название: %s  цена со скидкой: %d", p.getName(), p.getPrice() - (int)(p.getPrice()*0.1))
                 ))
-                .forEach(s->System.out.println(s));
+                .forEach(System.out::println);
     }
 }

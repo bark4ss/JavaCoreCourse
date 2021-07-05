@@ -1,5 +1,7 @@
 package streamAPI;
 
+import model.Phone;
+
 import java.util.Comparator;
 
 public class PhoneComparator implements Comparator<Phone> {

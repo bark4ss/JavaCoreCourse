@@ -1,8 +1,12 @@
-package streamAPI;
+package model;
 
 public class Phone {
     private String name;
     private int price;
+
+    public Phone(String name){
+        this.name=name;
+    }
 
     public Phone(String name, int price){
         this.name=name;
@@ -23,5 +27,13 @@ public class Phone {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

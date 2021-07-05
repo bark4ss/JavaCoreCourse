@@ -1,5 +1,7 @@
 package streamAPI;
 
+import model.Phone;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
