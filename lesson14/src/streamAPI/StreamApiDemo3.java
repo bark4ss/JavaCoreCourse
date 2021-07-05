@@ -18,6 +18,7 @@ public class StreamApiDemo3 {
 
         phoneStreamMap
                 .map(Phone::getName) // помещаем в поток только названия телефонов
+                .filter(el -> el.length() > 10)
                 .forEach(System.out::println);
         System.out.println("=======================");
 

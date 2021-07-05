@@ -26,14 +26,15 @@ public class ReferenceDemo1 {
         System.out.println(supplier.get());
 
         Integer integerReference = 5;
-        Supplier<String> supplierReference = integerReference::toString;
+        Phone phone = new Phone("iphone", 1000);
+        Supplier<String> supplierReference = phone::toString;
         System.out.println(supplierReference.get());
 
         //reference constructor
         Function<String, Phone> functionConstructor = (d) -> new Phone(d);
-        System.out.println(functionConstructor.apply("4"));
+        System.out.println(functionConstructor.apply("nokia"));
 
-        Function<String, Phone> functionConstructorReference = Phone::new;
-        System.out.println(functionConstructorReference.apply("4"));
+        Function<Integer, Phone> functionConstructorReference = Phone::new;
+        System.out.println(functionConstructorReference.apply(2));
     }
 }

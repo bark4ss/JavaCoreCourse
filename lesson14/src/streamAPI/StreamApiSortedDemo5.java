@@ -20,6 +20,8 @@ public class StreamApiSortedDemo5 {
                 .sorted() // сортировка по возрастанию
                 .forEach(System.out::println);
 
+        System.out.println("=========================");
+
         Stream<Phone> phoneStream = Stream.of(new Phone("iPhone 6 S", 54000), new Phone("Lumia 950", 45000),
                 new Phone("Samsung Galaxy S 6", 40000));
         phoneStream.sorted(new PhoneComparator()).forEach(p->System.out.printf("%s - %d \n",

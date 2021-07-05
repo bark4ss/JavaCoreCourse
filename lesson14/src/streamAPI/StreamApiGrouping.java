@@ -28,5 +28,16 @@ public class StreamApiGrouping {
             }
             System.out.println();
         }
+
+        Stream<AdvancedPhone> phoneStreamCollect = Stream.of(new AdvancedPhone("iPhone X", "Apple", 600),
+                new AdvancedPhone("Pixel 2", "Google", 500),
+                new AdvancedPhone("iPhone 8", "Apple",450),
+                new AdvancedPhone("Galaxy S9", "Samsung", 440),
+                new AdvancedPhone("Galaxy S8", "Samsung", 340));
+
+        Map<String, Long> result = phoneStreamCollect.collect(Collectors.groupingBy(AdvancedPhone::getCompany, Collectors.counting()));
+        for(Map.Entry<String, Long> item : result.entrySet()){
+            System.out.println("Company:" + item.getKey() + " : " + item.getValue());
+        }
     }
 }
