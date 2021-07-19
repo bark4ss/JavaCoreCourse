@@ -26,10 +26,10 @@ public class Appl {
         Group group = new Group();
         group.setName("Test group5");
         group.getMembers().add(
-                new Person(LocalDate.of(2002, 10, 11), "Vlad", "Govaka")
+                new Person(LocalDate.of(2002, 10, 11), "Denis", "Derka")
         );
         group.getMembers().add(
-                new Person(LocalDate.of(2003, 10, 11), "Vasya", "Kundas")
+                new Person(LocalDate.of(2003, 10, 11), "Vasya", "Kima")
         );
 
         return group;

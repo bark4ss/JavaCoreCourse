@@ -4,6 +4,8 @@ import threaddemo.model.JThread;
 
 public class ThreadDemo3 {
     public static void main(String[] args) {
+        //https://www.examclouds.com/java/java-core-russian/method-join
+        //https://javarush.ru/groups/posts/1998-upravlenie-potokami-metodih-volatile-i-yield
         System.out.println("Main thread started...");
         JThread myJThread = new JThread("JThread");
         myJThread.start();

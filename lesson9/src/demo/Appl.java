@@ -2,6 +2,8 @@ package demo;
 
 public class Appl {
     public static void main(String[] args) {
+        //https://topjava.ru/blog/rukovodstvo-po-string-pool-v-java
+        //https://topjava.ru/blog/compact-strings-java-9
         Book book = new Book(125,"name");
         String lineTrim = "    \t Hello \n";
         System.out.println(lineTrim);

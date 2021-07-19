@@ -7,7 +7,7 @@ import java.util.regex.PatternSyntaxException;
 public class RegexDemo1 {
     public static void main(String[] args) {
         //https://javarush.ru/groups/posts/136-reguljarnihe-vihrazhenija-v-java-chastjh-1
-        String regex = ".*ox";
+        String regex = ".++ox";
         //.ox
         //[csw]
         //[^asw]
@@ -23,7 +23,7 @@ public class RegexDemo1 {
         //possessive quantifier: ??,*?,+?
 
 
-        String input = "fox box pox";
+        String input = "ox baoxt2 aaox";
         //crabapple
         //The quick brown fox jumps over the lazy ox.
         //The Java language language

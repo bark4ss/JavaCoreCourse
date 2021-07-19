@@ -1,7 +1,6 @@
 package xmlbinding.saxparser;
 
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 import xmlbinding.model.Company;
 import xmlbinding.model.Employee;
@@ -28,7 +27,7 @@ public class CompanyHandler extends DefaultHandler {
     private StringBuilder elementValue;
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         if (elementValue == null) {
             elementValue = new StringBuilder();
         } else {
@@ -37,12 +36,12 @@ public class CompanyHandler extends DefaultHandler {
     }
 
     @Override
-    public void startDocument() throws SAXException {
+    public void startDocument() {
         company = new Company();
     }
 
     @Override
-    public void startElement(String uri, String lName, String qName, Attributes attr) throws SAXException {
+    public void startElement(String uri, String lName, String qName, Attributes attr) {
         switch (qName) {
             case OFFICES -> company.setOffices(new ArrayList<>());
             case OFFICE -> company.getOffices().add(new Office(attr.getValue(ATTR_OFFICE_FLOOR), attr.getValue(ATTR_OFFICE_ROOM)));
@@ -53,9 +52,9 @@ public class CompanyHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
-        switch (qName) {
-            case NAME -> company.setName(elementValue.toString());
+    public void endElement(String uri, String localName, String qName) {
+        if (NAME.equals(qName)) {
+            company.setName(elementValue.toString());
         }
     }
 

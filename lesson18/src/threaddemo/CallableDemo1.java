@@ -9,7 +9,7 @@ public class CallableDemo1 {
         FactorialTask task = new FactorialTask(5);
         FutureTask<Integer> futureTask = new FutureTask<>(task);
         new Thread(futureTask).start();
-        System.out.println(futureTask.get().intValue());
+        System.out.println(futureTask.get());
 
     }
 }

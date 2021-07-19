@@ -4,7 +4,7 @@ public class Store {
     private int product;
 
     public synchronized void get () {
-        while (product<1) {
+        while (product<2) {
             try {
                 wait();
             } catch (InterruptedException e) {

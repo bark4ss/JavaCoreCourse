@@ -5,7 +5,7 @@ public class RThread implements Runnable{
     public void run() {
         System.out.printf("%s started...  \n", Thread.currentThread().getName());
         try {
-            Thread.sleep(500);
+            Thread.sleep(5000);
         } catch (InterruptedException ex) {
             System.out.println("Thread has been interrupted");
         }

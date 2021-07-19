@@ -15,6 +15,7 @@ public class CommonResource {
     public void  increment () {
         counter++;
     }
+
     public synchronized void synchronizedIncrement () {
         setCounter(1);
         for (int i=0;i<5;i++) {

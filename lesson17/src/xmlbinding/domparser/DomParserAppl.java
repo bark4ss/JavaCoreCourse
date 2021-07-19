@@ -49,7 +49,6 @@ public class DomParserAppl {
                         Office office = new Office(eElementOffice.getAttribute("floor"), eElementOffice.getAttribute("room"));
                         office.setEmployees(new ArrayList<>());
                         NodeList nListEmployee = ((Element) nodeOffice).getElementsByTagName("employee");
-                        System.out.println(nListEmployee.getLength());
                         for (int k = 0; k < nListEmployee.getLength(); k++) {
                             Node nodeEmployee = nListEmployee.item(k);
                             if(nodeEmployee.getNodeType() == Node.ELEMENT_NODE) {
