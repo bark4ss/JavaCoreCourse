@@ -5,7 +5,7 @@ import java.sql.Statement;
 
 public class ConnectionDemo4 {
 
-    private static final String SQL_UPDATE_PRICE = "UPDATE Products SET Price = Price - 5000";
+    private static final String SQL_UPDATE_PRICE = "UPDATE Products SET Price = Price + 5000";
 
     public static void main(String[] args) {
         try (Connection conn = DBConnection.getConnection();
@@ -14,9 +14,8 @@ public class ConnectionDemo4 {
             int rows = statement.executeUpdate(SQL_UPDATE_PRICE);
             System.out.printf("Updated %d rows", rows);
 
-        } catch (Exception throwables) {
+        } catch (Exception throwable) {
             System.out.println("Connection failed...");
-            System.out.println(throwables);
         }
 
     }

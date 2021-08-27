@@ -12,9 +12,9 @@ public class ClientDemo {
 
         final String serverHost = "localhost";
 
-        Socket socketOfClient = null;
-        BufferedWriter os = null;
-        BufferedReader is = null;
+        Socket socketOfClient;
+        BufferedWriter os;
+        BufferedReader is;
 
         try {
 
@@ -51,7 +51,7 @@ public class ClientDemo {
             os.write("I am Tom Cat");
             os.newLine();
             os.flush();
-            os.write("QUIT");
+            //os.write("QUIT");
             os.newLine();
             os.flush();
 

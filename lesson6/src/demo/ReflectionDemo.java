@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ReflectionDemo {
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, InvocationTargetException {
+    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {
         Field[] fields = Person.class.getDeclaredFields();
         for (Field field: fields) {
             field.setAccessible(true);
@@ -20,6 +20,12 @@ public class ReflectionDemo {
             method.setAccessible(true);
             method.invoke(new Person());
         }
+
+        Person demo = new Person("Name2", 34);
+        Person demo2 = new Person();
+        System.out.println(Person.getCounter());
+        Person.setCounter(5);
+        System.out.println(Person.getCounter());
 
     }
 }

@@ -9,6 +9,12 @@ public class ScannerDemo {
         System.out.print("Type number: ");
         int a = sc.nextInt();
         Random random = new Random();
+        System.out.print("Type number 2: ");
+        int b = sc.nextInt();
+
+
+        System.out.println(b);
+        System.out.println("------------");
 
         while (a > 0) {
             int r = random.nextInt(13) + 5;

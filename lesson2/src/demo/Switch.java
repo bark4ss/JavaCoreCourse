@@ -2,41 +2,30 @@ package demo;
 
 public class Switch {
     public static void main(String[] args) {
-        //getPlanetAtmosphere(2);
+        System.out.println(
+                getPlanetAtmosphere(1)
+        );
         //getDayofWeek("Monday");
-        System.out.println(getSwitchJava13("Third"));
+        //System.out.println(getSwitchJava13("Third"));
     }
 
-    public static void getPlanetAtmosphere(int seqNumberFromSun) {
-        switch (seqNumberFromSun) {
-            case 1:
-                System.out.println("Нет атмосферы");
-                break;
-            case 2:
-            case 4: System.out.println("Углекислый газ");
-                break;
-            case 3: System.out.println("Углекислый газ");
-                    System.out.println("Азот");
-                    System.out.println("Кислород");
-                break;
-            case 5:
-            case 6: System.out.println("Водород");
-                    System.out.println("Гелий");
-                break;
-            case 7:
-            case 8: System.out.println("Метан");
-                    System.out.println("Водород");
-                    System.out.println("Гелий");
-                break;
-            default:
-                break;
-        }
+    public static int getPlanetAtmosphere(int seqNumberFromSun) {
+        return switch (seqNumberFromSun) {
+            case 1 -> 1;
+            case 2 -> 2;
+            case 4 -> 4;
+            case 3 -> 3;
+            case 5, 6 -> 6;
+            case 7, 8 -> 8;
+            default -> 0;
+        };
     }
 
     public static int getDayofWeek(String day) {
 
         switch (day) {
             case "Monday":
+                System.out.println("Today is monday !");
                 return 5;
             case "Thursday":
                 System.out.println("Today is sunny !");
@@ -51,7 +40,7 @@ public class Switch {
     }
 
     public static int getSwitchJava13(int count) {
-        int value = switch (count) {
+        return switch (count) {
             case 1:
                 yield 12;
             case 2:
@@ -62,7 +51,6 @@ public class Switch {
             default:
                 yield 0;
         };
-        return value;
     }
 
     public static int getSwitchJava13(String arg) {
@@ -71,7 +59,7 @@ public class Switch {
                 System.out.println("First here");
                 yield 12;
             }
-            case "Second","Third" -> 32;
+            case "Second", "Third" -> 32;
 
             default -> 0;
         };

@@ -8,14 +8,14 @@ public class Rectangle extends Figure {
         super(a, b);
     }
 
+    @Override
+    public int countSquare() {
+        return this.sideA*this.sideB;
+    }
+
     public Rectangle (int a, int b, int sideA, int sideB) {
         super(a,b);
         this.sideA = sideA;
         this.sideB = sideB;
-    }
-
-    @Override
-    public int countSquare() {
-        return 0;
     }
 }

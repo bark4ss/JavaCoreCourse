@@ -10,13 +10,14 @@ public class ConnectionDemo2 {
         //https://metanit.com/java/database/2.3.php
         try (Connection conn = DBConnection.getConnection();
              Statement statement = conn.createStatement()){
-            System.out.println("Connection to Store DB succesfull!");
-            statement.executeUpdate(SQL_CREATE_TABLE);
+            System.out.println("Connection to Store DB successfully!");
+            int rows = statement.executeUpdate(SQL_CREATE_TABLE);
+            System.out.println("Affected rows" + rows);
             System.out.println("Database has been created!");
 
-        } catch (Exception throwables) {
+        } catch (Exception throwable) {
             System.out.println("Connection failed...");
-            System.out.println(throwables);
+            System.out.println(throwable);
         }
     }
 }

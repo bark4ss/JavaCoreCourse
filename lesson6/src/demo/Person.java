@@ -7,7 +7,7 @@ public class Person {
     private static int counter;
 
     public Person() {
-
+        counter++;
     }
     public Person(String name, int age) {
         this.name = name;
@@ -16,7 +16,12 @@ public class Person {
     }
 
     public static int getCounter() {
+
         return counter;
+    }
+
+    public static void setCounter(int counter) {
+        Person.counter = counter;
     }
 
     private void printInfo() {

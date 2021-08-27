@@ -13,7 +13,7 @@ public class ServerExample {
         Socket socketOfServer;
 
         try {
-            listener = new ServerSocket(9999);
+            listener = new ServerSocket(9988);
         } catch (IOException e) {
             e.printStackTrace();
         }

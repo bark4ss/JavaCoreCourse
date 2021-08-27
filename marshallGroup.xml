@@ -2,15 +2,15 @@
 <group>
     <name>Test group5</name>
     <members>
-        <person>
+        <human>
             <firstName>Denis</firstName>
             <lastName>Derka</lastName>
             <birthDay>2002-10-11</birthDay>
-        </person>
-        <person>
+        </human>
+        <human>
             <firstName>Vasya</firstName>
             <lastName>Kima</lastName>
             <birthDay>2003-10-11</birthDay>
-        </person>
+        </human>
     </members>
 </group>

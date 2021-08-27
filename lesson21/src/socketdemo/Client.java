@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Client {
     private static final int serverPort = 6666;
-    private static final String localhost = "127.0.0.1";
+    private static final String localhost = "localhost";
 
     public static void main(String[] ar) {
         Socket socket = null;
@@ -45,7 +45,7 @@ public class Client {
                 isr = new InputStreamReader(System.in);
                 BufferedReader keyboard;
                 keyboard = new BufferedReader(isr);
-                String line = null;
+                String line;
                 System.out.println(
                         "Type in something and press enter");
                 System.out.println();
