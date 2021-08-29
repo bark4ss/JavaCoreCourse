@@ -1,4 +1,4 @@
-package testAppl;
+package testappl;
 
 import java.util.Arrays;
 
