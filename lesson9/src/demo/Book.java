@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Objects;
+
 public class Book {
     private int price;
     private String name;
