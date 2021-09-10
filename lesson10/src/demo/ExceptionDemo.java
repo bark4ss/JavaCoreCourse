@@ -8,7 +8,7 @@ public class ExceptionDemo {
             compute(1);
             compute(20);
         } catch (MyException e) {
-            System.out.println("caught: " + e);
+            System.out.println("caught: " + e.getDetail());
         }
     }
 

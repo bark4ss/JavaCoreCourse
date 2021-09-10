@@ -16,8 +16,6 @@ public class SerrializationAppl {
 			Person person = new Person("Ivan", 36, 180, true, new Position("developer", 500));
 			oos.writeObject(person);
 			System.out.println(person);
-			person.setName("Dima");
-			System.out.println(person);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

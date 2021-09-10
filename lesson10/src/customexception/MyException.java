@@ -6,6 +6,10 @@ public class MyException extends Exception {
         detail = a;
     }
 
+    public int getDetail() {
+        return detail;
+    }
+
     public String toString() {
         return "MyException[" + detail + "]";
     }

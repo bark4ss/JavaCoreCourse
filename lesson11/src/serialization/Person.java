@@ -7,15 +7,10 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1L;
-
-	public static String nickName = "agent007";
+	public static String nickName = "agent008";
 		
 	private String name;
-	private int age;
+	private transient int age;
 	private int height;
 	private boolean married;
 	private Position pos;
@@ -61,9 +56,15 @@ public class Person implements Serializable {
 		this.married = married;
 	}
 
-	private void writeObject(ObjectOutputStream oos) throws IOException {
-        throw new NotSerializableException();
-    }
-
-
+	@Override
+	public String toString() {
+		return "Person{" +
+				"name='" + name + '\'' +
+				", nickname=" + nickName +
+				", age=" + age +
+				", height=" + height +
+				", married=" + married +
+				", pos=" + pos +
+				'}';
+	}
 }

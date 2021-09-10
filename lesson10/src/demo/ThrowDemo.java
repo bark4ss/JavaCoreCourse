@@ -1,24 +1,26 @@
 package demo;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ThrowDemo {
     public static void main(String[] args) {
 
         try {
             demoProc();
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    static void demoProc() throws FileNotFoundException {
+    static void demoProc() throws FileNotFoundException, IOException {
         try{
             throw new FileNotFoundException("demo");
         }catch (FileNotFoundException e) {
-            System.out.println("caught:" + e.getMessage());
             throw new FileNotFoundException();
+        } catch (Exception e) {
+            throw new IOException();
         }
 
     }

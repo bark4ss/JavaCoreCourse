@@ -16,6 +16,7 @@ public class FileSymbolCopy {
 				fileOut.write(a);
 
 			}
+			fileOut.write("Hello!!");
 		}
 	}
 
