@@ -1,5 +1,6 @@
 package demo;
 
+import comp.Human;
 import model.Person;
 import model.Profession;
 import model.Calculator;

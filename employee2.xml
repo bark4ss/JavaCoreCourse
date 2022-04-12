@@ -2,7 +2,7 @@
 <company>
     <name>IT-Heaven</name>
     <offices>
-        <office floor="1" room="1">
+        <office>
             <employees>
                 <employee name="Maksim" job="Middle Software Developer" />
                 <employee name="Ivan" job="Junior Software Developer" />

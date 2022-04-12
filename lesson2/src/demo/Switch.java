@@ -24,9 +24,10 @@ public class Switch {
     public static int getDayofWeek(String day) {
 
         switch (day) {
-            case "Monday":
+            case "Monday":{
                 System.out.println("Today is monday !");
                 return 5;
+            }
             case "Thursday":
                 System.out.println("Today is sunny !");
                 break;

@@ -40,4 +40,8 @@ public class Employee extends Person {
         }
         return true;
     }
+
+    public static int compute(int a) {
+        return a*2;
+    }
 }

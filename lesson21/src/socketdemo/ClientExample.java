@@ -11,7 +11,7 @@ public class ClientExample {
         BufferedReader is;
 
         try {
-            socketOfClient = new Socket("127.0.0.1", 9988);
+            socketOfClient = new Socket("localhost", 9988);
             // Create output stream at the client (to send data to the server)
             os = new BufferedWriter(new OutputStreamWriter(socketOfClient.getOutputStream()));
 

@@ -2,25 +2,19 @@ package demo;
 
 public class IfElseConditionAppl {
     public static void main(String[] args) {
-        int countOfdevelopers = 7;
-        switch (countOfdevelopers) {
-            case 1 :
-                System.out.println(countOfdevelopers + " программист");
+        int a = 4;
+        switch (a) {
+            case 3: {
+                System.out.println("Three");
+                System.out.println("T");
                 break;
-            case 2:
-            case 3:
-            case 4:
-                System.out.println(countOfdevelopers + " программиста");
-                break;
-            case 5:
-            case 6:
+            }
+            case 4,5:
+                System.out.println("Five");break;
             case 7:
-            case 8:
-            case 9:
-                System.out.println(countOfdevelopers + " программистов");
                 break;
             default:
-                System.out.println("More then 10 developers");
+                System.out.println("Default");
         }
     }
 }

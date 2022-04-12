@@ -11,8 +11,10 @@ public class RegexDemo2 {
         //Поиск будет происходить только по символам нижнего регистра.
         //Чтобы отключить чувствительность к регистру, можно использовать Pattern.CASE_INSENSITIVE.
 
-        Matcher matcher1 = pattern1.matcher("x y z 1 2 3 4 ");
-        System.out.println(matcher1.find());
+        Matcher m = pattern1.matcher("x y z 1 2 3 4xz xx ");
+        while (m.find())
+            System.out.println("Found [" + m.group() + "] starting at "
+                    + m.start() + " and ending at " + (m.end() - 1));
         //Поиск любого совпадения с шаблоном.
         //Выводится значение true, так как в строке есть символы шаблона.
 

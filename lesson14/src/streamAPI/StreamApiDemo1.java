@@ -31,7 +31,7 @@ public class StreamApiDemo1 {
         System.out.println(isAllMatchNumber);
 
         //max
-        int[] emptyNumbers = {-5, -4, -3, -3, -2, -1, 0, 1, 2, 2, 3, 4, 5};
+        int[] emptyNumbers = {};
         IntStream intMaxNumberStream = IntStream.of(emptyNumbers);
         OptionalInt maxNumber = intMaxNumberStream.max();
         System.out.println(maxNumber.getAsInt());

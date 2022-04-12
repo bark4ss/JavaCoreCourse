@@ -12,8 +12,12 @@ public class FormatLocalDateTimeDemo1 {
         LocalDateTime localDateTime = LocalDateTime.parse("02 5, 18 12:10:56", formatter1);
         System.out.println(localDateTime);
 
-        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("MMMMM d, yyyy", Locale.US);
-        LocalDate localDate = LocalDate.parse("J 5, 2018", formatter2);
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("M d, yyyy", Locale.US);
+        LocalDate localDate = LocalDate.parse("1 5, 2018", formatter2);
         System.out.println(localDate);
+
+        DateTimeFormatter specificFormat = DateTimeFormatter.ofPattern("EE: yyyy-MMM-dd | HH-mm-ss",Locale.US);
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now.format(specificFormat));
     }
 }

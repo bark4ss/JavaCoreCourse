@@ -12,6 +12,14 @@ public class Person {
         this.age = age;
     }
 
+    public static int compute(int a) {
+        return a;
+    }
+
+    public int compute(double a) {
+        return (int) a;
+    }
+
     public String getName() {
         return name;
     }

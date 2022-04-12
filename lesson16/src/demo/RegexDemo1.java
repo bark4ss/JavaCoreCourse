@@ -7,7 +7,7 @@ import java.util.regex.PatternSyntaxException;
 public class RegexDemo1 {
     public static void main(String[] args) {
         //https://javarush.ru/groups/posts/136-reguljarnihe-vihrazhenija-v-java-chastjh-1
-        String regex = ".++ox";
+        String regex = "([^0{3}])";
         //.ox
         //[csw]
         //[^asw]
@@ -23,7 +23,8 @@ public class RegexDemo1 {
         //possessive quantifier: ??,*?,+?
 
 
-        String input = "ox baoxt2 aaox";
+        String input = "011";
+
         //crabapple
         //The quick brown fox jumps over the lazy ox.
         //The Java language language
@@ -34,9 +35,10 @@ public class RegexDemo1 {
         try {
             Pattern p = Pattern.compile(regex);
             Matcher m = p.matcher(input);
-            while (m.find())
-                System.out.println("Found [" + m.group() + "] starting at "
-                        + m.start() + " and ending at " + (m.end() - 1));
+            System.out.println(m.find());
+//            while (m.find())
+//                System.out.println("Found [" + m.group() + "] starting at "
+//                        + m.start() + " and ending at " + (m.end() - 1));
         } catch (PatternSyntaxException pse) {
             System.err.println("Неправильное регулярное выражение: " + pse.getMessage());
             System.err.println("Описание: " + pse.getDescription());

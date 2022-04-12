@@ -25,7 +25,7 @@ public class StreamApiReduceDemo6 {
                 new Phone("Samsung Galaxy s6", 40000),
                 new Phone("LG G 4", 32000));
 
-        int sum = phoneStream.reduce(100_000, (x,y) -> {
+        int sum = phoneStream.reduce(0, (x,y) -> {
             if(y.getPrice()<50000) {
                 return x + y.getPrice();
             } else {

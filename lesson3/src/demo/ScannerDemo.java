@@ -8,6 +8,9 @@ public class ScannerDemo {
         Scanner sc = new Scanner(System.in);
         System.out.print("Type number: ");
         int a = sc.nextInt();
+        /*String temp = sc.next();
+        sc.nextLine();
+        String temp1 = sc.next();*/
         Random random = new Random();
         System.out.print("Type number 2: ");
         int b = sc.nextInt();

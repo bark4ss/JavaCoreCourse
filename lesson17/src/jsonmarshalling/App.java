@@ -34,21 +34,21 @@ public class App {
 
         File userJsonFile = new File("user.json");
 
-        //String bookJson = bookJsonConverter.convertObjToJson(book);
+        String bookJson = userJsonConverter.convertObjToJson(user);
         //System.out.println(bookJson);
 
         String carToJson = carJsonConverter.convertObjToJson(carJsonFile,cars.get(0));
-        System.out.println(carToJson);
+        //System.out.println(carToJson);
 
         String carsToJson = carJsonConverter.convertObjArrayToJson(carJsonArrFile,cars);
-        System.out.println(carsToJson);
+        //System.out.println(carsToJson);
 
         Car car = carJsonConverter.convertJsonToObj(carToJson,Car.class);
-        System.out.println(car);
+        //System.out.println(car);
 
 
         Car carFromJsonFile = carJsonConverter.convertJsonToObj(carToJson, Car.class);
-        System.out.println(carFromJsonFile);
+        //System.out.println(carFromJsonFile);
 
         List<Car> carArray = carJsonConverter.convertJsonToObjArr(carJsonArrFile);
         //System.out.println("List of cars:" + carArray);

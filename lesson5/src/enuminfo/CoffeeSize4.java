@@ -1,7 +1,16 @@
 package enuminfo;
 
 public enum CoffeeSize4 {
-    BIG(100),
+    BIG(100) {
+        @Override
+        public String toString() {
+            return "BIG ENUM";
+        }
+        @Override
+        public String getLidCode() {
+            return "AA";
+        }
+    },
     HUGE(150),
     OVERWHELMING(200) {
         @Override

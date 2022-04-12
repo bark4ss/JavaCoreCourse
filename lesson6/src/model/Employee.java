@@ -6,11 +6,14 @@ public class Employee extends Person {
     private String name;
 
     public Employee () {
+        super();
+        System.out.println("Default Employee");
     }
 
     public Employee (String name1, String name2) {
         super.setName(name1);
         this.name = name2;
+
 
     }
 
@@ -40,5 +43,9 @@ public class Employee extends Person {
     public void setName(String name) {
         System.out.println(name + " " + name);
         super.setName(name);
+    }
+
+    public void displayInfo () {
+        System.out.println("Hello Employee" + this.name);
     }
 }

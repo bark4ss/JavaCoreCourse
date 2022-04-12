@@ -36,37 +36,39 @@ public class SimpleClientDemo {
         }
 
         try {
+            while (true) {
 
-            // Write data to the output stream of the Client Socket.
-            os.write("HELLO");
+                // Write data to the output stream of the Client Socket.
+                os.write("HELLO");
 
-            // End of line
-            os.newLine();
+                // End of line
+                os.newLine();
 
-            // Flush data.
-            os.flush();
-            os.write("I am Tom Cat");
-            os.newLine();
-            os.flush();
-            os.write("QUIT");
-            os.newLine();
-            os.flush();
+                // Flush data.
+                os.flush();
+                os.write("I am Tom Cat");
+                os.newLine();
+                os.flush();
+//                os.write("QUIT");
+//                os.newLine();
+//                os.flush();
 
 
 
-            // Read data sent from the server.
-            // By reading the input stream of the Client Socket.
-            String responseLine;
-            while ((responseLine = is.readLine()) != null) {
-                System.out.println("Server: " + responseLine);
-                if (responseLine.contains("OK")) {
-                    break;
+                // Read data sent from the server.
+                // By reading the input stream of the Client Socket.
+                String responseLine;
+                while ((responseLine = is.readLine()) != null) {
+                    System.out.println("Server: " + responseLine);
+                    if (responseLine.contains("OK")) {
+                        os.close();
+                        is.close();
+                        socketOfClient.close();
+                        break;
+                    }
                 }
             }
 
-            os.close();
-            is.close();
-            socketOfClient.close();
         } catch (UnknownHostException e) {
             System.err.println("Trying to connect to unknown host: " + e);
         } catch (IOException e) {

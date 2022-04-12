@@ -1,19 +1,22 @@
 package socketdemo;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerExample {
     public static void main(String[] args) {
         ServerSocket listener = null;
+        InetAddress ia;
         String line;
         BufferedReader is;
         BufferedWriter os;
         Socket socketOfServer;
 
         try {
-            listener = new ServerSocket(9988);
+            ia = InetAddress.getByName("localhost");
+            listener = new ServerSocket(9988, 0, ia);
         } catch (IOException e) {
             e.printStackTrace();
         }

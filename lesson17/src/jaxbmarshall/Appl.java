@@ -19,7 +19,7 @@ public class Appl {
         Appl appl = new Appl();
         appl.marshallExample();
         System.out.println("Done");
-        appl.unmarshallExample();
+        //appl.unmarshallExample();
     }
 
     public static Group createGroup() {

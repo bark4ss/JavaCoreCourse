@@ -1,23 +1,22 @@
 package comp;
 
 public class Human {
-    private int age;
+    private int age = 3;
     private int weight;
     private String name;
     private String lastName;
     private boolean isMarried;
 
-    public Human () {
-    }
+    public Human(){}
 
-    public Human (int age) {
-        this.age = age;
-    }
-    public Human (int age, int weight, String name, String lastName) {
+    public Human(int age, int weight){
         this.age = age;
         this.weight = weight;
-        this.name = name;
-        this.lastName = lastName;
+    }
+
+    public Human(int age, int weight, boolean isMarried){
+        this(age,weight);
+        this.isMarried = isMarried;
     }
 
     public int getAge() {
@@ -25,7 +24,7 @@ public class Human {
     }
 
     public void setAge(int age) {
-        if(age < 0) {
+        if (age < 0) {
             this.age = 0;
         } else {
             this.age = age;
@@ -33,6 +32,7 @@ public class Human {
     }
 
     public int getWeight() {
+
         return weight;
     }
 
@@ -64,9 +64,8 @@ public class Human {
         isMarried = married;
     }
 
-    public void display () {
+    public void display() {
         System.out.println("Вся информация: " + this.age + " " + this.name + " " + this.lastName);
-        System.out.printf("Вся информация: %d %s %s",this.age,this.name,this.lastName);
+        System.out.printf("Вся информация: %d %s %s", this.age, this.name, this.lastName);
     }
-
 }

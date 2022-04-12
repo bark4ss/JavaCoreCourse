@@ -19,11 +19,11 @@ public class DemoSet {
             System.out.println(state);
         }
 
-        ComparatorPersonBaName comparator = new ComparatorPersonBaName();
+        ComparatorPersonByName comparator = new ComparatorPersonByName();
         ComparatorPersonByAge comparatorPersonByAge = new ComparatorPersonByAge();
-        Set<Person> persons = new TreeSet<>();
+        Set<Person> persons = new TreeSet<>(comparator.thenComparing(comparatorPersonByAge));
         persons.add(new Person("Tom", 26));
-        persons.add(new Person("Tom", 26));
+        persons.add(new Person("Alice", 26));
         persons.add(new Person("Alice", 25));
         persons.add(new Person("Kate", 31));
         persons.add(new Person("Nick", 31));

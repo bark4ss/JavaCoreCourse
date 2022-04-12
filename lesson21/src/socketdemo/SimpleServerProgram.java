@@ -42,7 +42,7 @@ public class SimpleServerProgram {
             while (true) {
                 // Read data to the server (sent from client).
                 line = is.readLine();
-
+                System.out.println(line);
                 // Write to socket of Server
                 // (Send to client)
                 os.write(">> " + line);

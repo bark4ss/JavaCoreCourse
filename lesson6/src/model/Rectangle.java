@@ -5,7 +5,8 @@ public class Rectangle extends Figure {
     private int sideB;
 
     public Rectangle (int a, int b) {
-        super(a, b);
+        this.sideA = a;
+        this.sideB = b;
     }
 
     @Override
