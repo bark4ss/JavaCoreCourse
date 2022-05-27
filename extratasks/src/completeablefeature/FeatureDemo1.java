@@ -12,7 +12,7 @@ public class FeatureDemo1 {
         //https://www.callicoder.com/java-8-completablefuture-tutorial/
         CompletableFuture<String> whatsYourNameFuture = CompletableFuture.supplyAsync(() -> {
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(10);
             } catch (InterruptedException e) {
                 throw new IllegalStateException(e);
             }

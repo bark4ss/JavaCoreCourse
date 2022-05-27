@@ -18,7 +18,7 @@ public class Appl {
 
     public static void main(String[] args) {
         Appl appl = new Appl();
-        appl.marshallExample();
+        //appl.marshallExample();
         System.out.println("Done");
         appl.unmarshallExample();
     }

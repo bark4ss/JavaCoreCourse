@@ -29,6 +29,7 @@ public class DomParserAppl {
     {
         //Initialize a company
         Company company = new Company();
+        List<String> names = new ArrayList<>();
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -63,6 +64,13 @@ public class DomParserAppl {
                     }
                 }
             }
+
+        }
+        NodeList nodeNames = document.getElementsByTagName("employee");
+        for (int i=0;i<nodeNames.getLength();++i){
+            Node nodeName = nodeNames.item(i);
+            Element elementName = (Element) nodeName;
+            names.add(elementName.getAttribute("name"));
         }
         return company;
     }

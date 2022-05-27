@@ -7,15 +7,15 @@ import java.time.Period;
 public class PeriodDemo4 {
     public static void main(String[] args) {
         Period period2d = Period.ofDays(3);
-        Period period8d = period2d.withDays(2);
-        Period period2y1m2d = period2d.withYears(2).withMonths(1);
+        Period period8d = period2d.withDays(8);
+        Period period2y1m2d = period2d.withYears(2).withMonths(1).withDays(2);
 
         System.out.println(period2d);
         System.out.println(period8d);
         System.out.println(period2y1m2d);
 
         LocalDate today = LocalDate.now();
-        LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
+        LocalDate birthday = LocalDate.of(2002, Month.SEPTEMBER, 11);
 
         LocalDate nextBDay = birthday.withYear(today.getYear());
 

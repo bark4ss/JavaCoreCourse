@@ -12,14 +12,13 @@ public class CommonResource {
         this.counter = counter;
     }
 
-    public void  increment () {
-        counter++;
+    public void increment() {
+        ++counter;
     }
 
-    public synchronized void synchronizedIncrement () {
-        setCounter(1);
-        for (int i=0;i<5;i++) {
-            System.out.printf("%s %d \n", Thread.currentThread().getName(),getCounter());
+    public void synchronizedIncrement() throws InterruptedException {
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("%s %d \n", Thread.currentThread().getName(), getCounter());
             increment();
             try {
                 Thread.sleep(500);

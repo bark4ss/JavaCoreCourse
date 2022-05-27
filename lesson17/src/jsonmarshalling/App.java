@@ -40,27 +40,27 @@ public class App {
         String carToJson = carJsonConverter.convertObjToJson(carJsonFile,cars.get(0));
         //System.out.println(carToJson);
 
-        String carsToJson = carJsonConverter.convertObjArrayToJson(carJsonArrFile,cars);
+        //String carsToJson = carJsonConverter.convertObjArrayToJson(carJsonArrFile,cars);
         //System.out.println(carsToJson);
 
-        Car car = carJsonConverter.convertJsonToObj(carToJson,Car.class);
+        //Car car = carJsonConverter.convertJsonToObj(carToJson,Car.class);
         //System.out.println(car);
 
 
-        Car carFromJsonFile = carJsonConverter.convertJsonToObj(carToJson, Car.class);
+        //Car carFromJsonFile = carJsonConverter.convertJsonToObj(carToJson, Car.class);
         //System.out.println(carFromJsonFile);
 
-        List<Car> carArray = carJsonConverter.convertJsonToObjArr(carJsonArrFile);
+        //List<Car> carArray = carJsonConverter.convertJsonToObjArr(carJsonArrFile);
         //System.out.println("List of cars:" + carArray);
 
-        String color = carJsonConverter.getObjJsonNode(carToJson, "color");
+        //String color = carJsonConverter.getObjJsonNode(carToJson, "color");
         //System.out.println(color);
 
-        Map<String, Object> carMapFromJson = carJsonConverter.convertJsonToMap(carJsonFile);
+        //Map<String, Object> carMapFromJson = carJsonConverter.convertJsonToMap(carJsonFile);
         //System.out.println(carMapFromJson);
 
-        String userToJson = userJsonConverter.convertObjToJsonWithRoot(userJsonFile,user);
-        System.out.println(userToJson);
+        //String userToJson = userJsonConverter.convertObjToJsonWithRoot(userJsonFile,user);
+        //System.out.println(userToJson);
 
     }
 }

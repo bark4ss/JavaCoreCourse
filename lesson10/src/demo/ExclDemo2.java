@@ -12,7 +12,7 @@ public class ExclDemo2 {
             b = 42 / a;
             b= 6;
             System.out.println(b);
-        } catch (Exception e) {
+        } catch (IndexOutOfBoundsException e) {
             b = 5;
             System.out.println("divide by 0" + b);
         }

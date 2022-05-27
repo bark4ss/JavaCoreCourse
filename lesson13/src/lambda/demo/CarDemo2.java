@@ -2,9 +2,6 @@ package lambda.demo;
 
 import lambda.model.Car;
 import lambda.model.CarTypes;
-import lambda.util.Searchable;
-import lambda.util.impl.CompactCarSearch;
-import lambda.util.impl.ExpensiveCarSearch;
 
 import java.util.function.Predicate;
 
@@ -17,20 +14,12 @@ public class CarDemo2 {
                 new Car(CarTypes.COMPACT, 10000),
         };
 
-        Searchable carByprice = new Searchable() {
-            @Override
-            public boolean test(Car car) {
-                return false;
-            }
-        };
-
 
         CarDemo2 carDemo = new CarDemo2();
         //System.out.println(carDemo.getCarsNumber(cars, new CompactCarSearch()));
         //System.out.println(carDemo.getCarsNumber(cars, new ExpensiveCarSearch()));
 
         System.out.println(carDemo.getCarsNumber(cars, car -> car.getCost()> 20000));
-        System.out.println(carDemo.getCarsNumber(cars, car -> car.getType().equals(CarTypes.SPORT)));
     }
 
     private int getCarsNumber(Car[] cars, Predicate<Car> s) {

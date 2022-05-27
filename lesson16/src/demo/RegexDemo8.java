@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class RegexDemo8 {
     public static void main(String[] args) {
-        Pattern p = Pattern.compile("(cat)");
-        Matcher m = p.matcher("one cat, two cats, or three cats on a fence");
+        Pattern p = Pattern.compile("(cat(cat))");
+        Matcher m = p.matcher("one catcat, two cats, or three cats on a fence");
         StringBuffer sb = new StringBuffer();
         while (m.find()) {
             m.appendReplacement(sb, "$1erpillar");

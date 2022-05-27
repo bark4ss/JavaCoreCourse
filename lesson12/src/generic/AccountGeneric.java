@@ -1,6 +1,6 @@
 package generic;
 
-public class AccountGeneric<T extends Integer,P> {
+public class AccountGeneric<T,P> {
 
     private T id;
     private P sum;

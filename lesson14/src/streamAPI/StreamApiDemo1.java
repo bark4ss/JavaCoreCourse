@@ -1,13 +1,13 @@
 package streamAPI;
 
-import java.util.Arrays;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamApiDemo1 {
     public static void main(String[] args) {
         //https://metanit.com/java/tutorial/10.1.php
+        Stream<String> streamFromValues = Stream.of("a1", "a2", "a3");
         int[] numbers = {-5, -4, -3, -3, -2, -1, 0, 1, 2, 2, 3, 4, 5};
         int count=0;
         for(int i:numbers){
@@ -18,6 +18,7 @@ public class StreamApiDemo1 {
 
         IntStream intStream = IntStream.of(numbers);
         long countWithStream = intStream.filter(element -> element > 0).count();
+        long sum = intStream.filter(element -> element > 0).sum();
         System.out.println(countWithStream);
 
         //distinct

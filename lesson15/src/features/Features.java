@@ -12,12 +12,13 @@ public class Features {
         var list = new ArrayList<String>();  //перед нами ArrayList<String>
         var stream = list.stream();
 
-        BufferedReader reader2 = new BufferedReader(new FileReader("journaldev.txt"));
+
+        /*BufferedReader reader2 = new BufferedReader(new FileReader("journaldev.txt"));
         BufferedReader reader3 = new BufferedReader(new FileReader("journaldev.txt"));
         try (reader2;reader3) {
             System.out.println(reader2.readLine());
             System.out.println(reader3.readLine());
-        }
+        }*/
 
         String htmlBlock = """
                	<html>
@@ -32,7 +33,8 @@ public class Features {
                 "<p>CodeGym Web page</p> " +
                 "</body> <html> " +
                 "";
-
+        System.out.println(htmlBlock);
+        System.out.println(htmlBlock2);
         Triangle triangle = new Triangle(4,5,"hello");
         triangle.name();
     }

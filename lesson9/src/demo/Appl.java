@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.StringTokenizer;
+
 public class Appl {
     public static void main(String[] args) {
         //https://topjava.ru/blog/rukovodstvo-po-string-pool-v-java
@@ -32,7 +34,7 @@ public class Appl {
         int comparament = "Va".compareTo("vA");
         System.out.println(comparament);
         System.out.println(joiner.charAt(5));
-        System.out.println("bAttt".equalsIgnoreCase("VaTTT"));
+        System.out.println("vAttt".equalsIgnoreCase("VaTTT"));
         String temp = "Something wronggoes wrong";
         char[] result = new char[10];
         temp.getChars(0,8, result, 2);
@@ -50,10 +52,9 @@ public class Appl {
         System.out.println(matcher.strip().length());
         System.out.println(temp.substring(1,3));
         StringBuilder builder = new StringBuilder();
-        builder.append(comparament);
-        builder.append(matcher).append(temp).append("new");
         builder.insert(3, "TTTTTT");
-        builder.replace(3,4,"AAA");
+        //builder.replace(3,6,"AAAAAA");
+        builder.reverse();
         String result2 = builder.toString();
         System.out.println(result2);
         String blank = "     ";

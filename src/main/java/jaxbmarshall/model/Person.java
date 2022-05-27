@@ -2,12 +2,13 @@ package jaxbmarshall.model;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import jaxbmarshall.util.LocalDateAdapter;
 
 import java.time.LocalDate;
-
+@XmlRootElement(name = "PERSON")
 @XmlType(propOrder = {"firstName","lastName","birthDay"})
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Person {

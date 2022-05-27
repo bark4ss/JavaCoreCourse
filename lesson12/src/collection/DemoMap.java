@@ -32,6 +32,7 @@ public class DemoMap {
 
         Map<Person, String> persons = new TreeMap<>();
         persons.put(new Person("Tom",32), "1240i54");
+        persons.put(new Person("Tom",33), "1240i533");
         persons.put(new Person("Bob",26), "1564i55");
         persons.put(new Person("Nick",28), "4540i56");
         persons.put(new Person("Den",28), "4540i57");

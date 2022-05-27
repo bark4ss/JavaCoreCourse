@@ -1,6 +1,8 @@
 package localdatetime8.duration;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class DurationDemo1 {
@@ -13,7 +15,8 @@ public class DurationDemo1 {
         Duration oneSecondFromMillis = Duration.ofMillis(1);
         Duration oneSecondFromNanos = Duration.ofNanos(1000000000);
         Duration oneSecond = Duration.of(1, ChronoUnit.SECONDS);
-
+        Duration test = Duration.between(LocalDateTime.now(),LocalDateTime.now().plusYears(1).plusMinutes(2));
+        System.out.println("TTT " + test);
         System.out.println("oneDay: " + oneDay);
         System.out.println("oneHour: " + oneHour);
         System.out.println("oneMin: " + oneMin);

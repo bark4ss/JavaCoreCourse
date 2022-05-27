@@ -1,5 +1,7 @@
 package generic;
 
+import java.util.function.Function;
+
 public class Program {
     public static void main(String[] args) {
         AccountGeneric<Integer,String> account1 = new AccountGeneric<>(12,"6000");

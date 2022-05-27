@@ -7,6 +7,8 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
+	private static final long serialVersionUID = 2L;
+
 	public static String nickName = "agent008";
 		
 	private String name;
@@ -19,7 +21,7 @@ public class Person implements Serializable {
 		super();
 		this.name = name;
 		this.age = age;
-		this.height = height;
+		this.height = 165;
 		this.married = married;
 		this.pos = pos;
 	}

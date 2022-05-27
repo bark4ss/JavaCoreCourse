@@ -9,16 +9,16 @@ public class CreateDirectoryDemo2 {
     public static void main(String[] args) throws IOException {
 
         // определяем объект для каталога
-        File dir = new File("G://NewDir/NewDir");
-        //boolean created = dir.mkdirs();
-        //if(created)
-        //    System.out.println("Folder has been created");
-        // переименуем каталог
-        File newDir = new File("G://NewDir");
-        //dir.renameTo(newDir);
-        // удалим каталог
-        boolean deleted = newDir.delete();
-        if(deleted)
-            System.out.println("Folder has been deleted");
+        File dir = new File("G://NewDir2");
+       /* boolean created = dir.mkdirs();
+        if(created)
+            System.out.println("Folder has been created");*/
+         //переименуем каталог
+        File newDir = new File("G://NewDir22");
+        dir.renameTo(newDir);
+         //удалим каталог
+        //boolean deleted = newDir.delete();
+        /*if(deleted)
+            System.out.println("Folder has been deleted");*/
     }
 }

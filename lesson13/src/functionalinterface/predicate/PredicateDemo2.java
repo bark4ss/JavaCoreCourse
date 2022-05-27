@@ -8,6 +8,6 @@ public class PredicateDemo2 {
         Predicate<String> containsB = t -> t.contains("B");
         Predicate<String> containsF = t -> t.contains("F");
         Predicate<String> containsD = containsF.negate();
-        System.out.println(containsA.and(containsB).and(containsD).test("ABCD"));
+        System.out.println(containsA.and(containsB).negate().test("ABCD"));
     }
 }

@@ -10,7 +10,6 @@ public class FileSymbolCopy {
 
 		try (FileReader fileIn = new FileReader("fileSymbol.txt");
 				FileWriter fileOut = new FileWriter("copied_fileSymbol.txt",true)) {
-
 			int a;
 			while ((a = fileIn.read()) != -1) {
 				fileOut.write(a);

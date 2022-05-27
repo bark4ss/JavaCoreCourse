@@ -1,5 +1,7 @@
 package demo;
 
+import java.nio.charset.StandardCharsets;
+
 public class ApplicationStringDemo {
     public static void main(String[] args) {
         String line = "Line";

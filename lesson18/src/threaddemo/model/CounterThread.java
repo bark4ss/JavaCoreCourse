@@ -2,7 +2,7 @@ package threaddemo.model;
 
 public class CounterThread implements Runnable {
 
-    private volatile CommonResource commonResource;
+    private final CommonResource commonResource;
 
     public CounterThread(CommonResource resource) {
         this.commonResource = resource;
@@ -10,6 +10,10 @@ public class CounterThread implements Runnable {
 
     @Override
     public void run() {
-    commonResource.synchronizedIncrement();
+        try {
+            commonResource.synchronizedIncrement();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

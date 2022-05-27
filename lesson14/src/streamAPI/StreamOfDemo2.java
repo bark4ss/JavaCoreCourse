@@ -8,6 +8,7 @@ public class StreamOfDemo2 {
         citiesStream.forEach(s->System.out.println(s));
         System.out.println("===========================");
         Stream<String> citiesStreamFiler = Stream.of("Париж", "Лондон", "Мадрид","Берлин", "Брюссель");
-        citiesStreamFiler.filter(el->el.length()==6).forEach(System.out::println);
+        citiesStreamFiler.filter(el->el.length()==6)
+                .forEach(System.out::println);
     }
 }

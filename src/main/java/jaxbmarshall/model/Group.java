@@ -8,6 +8,7 @@ import java.util.List;
 @XmlRootElement(name = "group")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Group {
+    @XmlElement(name = "Name")
     private String name;
     @XmlElementWrapper(name = "members")
     @XmlElement(name = "person")

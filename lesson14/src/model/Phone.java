@@ -37,6 +37,14 @@ public class Phone {
         return a > 1;
     }
 
+    public static boolean temp(Phone p){
+        return p.getPrice() > 50000;
+    }
+
+    public boolean temp2(Phone p){
+        return p.getPrice() > 40000;
+    }
+
     @Override
     public String toString() {
         return "Phone{" +
